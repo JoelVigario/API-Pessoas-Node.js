@@ -17,7 +17,7 @@ conexao.connect()
  * @returns objecto da promise 
  */
 export const consulta = (sql, valores, mensagemReject) => {
-    new Promise((resolve, reject) => {
+    return new Promise((resolve, reject) => {
         conexao.query(sql, valores, (erro, result) => {
             if (erro) return reject(mensagemReject)
             const row = JSON.parse(JSON.stringify(result))
