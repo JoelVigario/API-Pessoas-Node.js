@@ -26,7 +26,11 @@ class PessoaController {
         res.json(row)
     }
 
-    delete() {}
+    async delete(req, res) {
+        const id = req.params.id
+        const row = await PessoaRepository.delete(id)
+        res.json(row)
+    }
 
 }
 

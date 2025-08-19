@@ -22,7 +22,10 @@ class PessoaRepository {
         return consulta(sql, [pessoa, id], "Não foi possível atualizar!")
     }
 
-    delete() {}
+    delete(id) {
+        const sql = "DELETE FROM pessoa WHERE id = ?"
+        return consulta(sql, id, "Não foi possível apagar!")
+    }
 
 }
 
