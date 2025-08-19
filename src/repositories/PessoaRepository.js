@@ -17,7 +17,10 @@ class PessoaRepository {
         return consulta(sql, pessoa, "Não foi possível cadastrar!")
     }
 
-    update() {}
+    update(pessoa, id) {
+        const sql = "UPDATE pessoa SET ? WHERE id = ?"
+        return consulta(sql, [pessoa, id], "Não foi possível atualizar!")
+    }
 
     delete() {}
 

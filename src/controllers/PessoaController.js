@@ -19,7 +19,12 @@ class PessoaController {
         res.json(row)
     }
 
-    update() {}
+    async update(req, res) {
+        const pessoa = req.body
+        const id = req.params.id
+        const row = await PessoaRepository.update(pessoa, id)
+        res.json(row)
+    }
 
     delete() {}
 
