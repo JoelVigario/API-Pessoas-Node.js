@@ -7,7 +7,11 @@ class PessoaController {
         res.json(row)
     }
 
-    show() {}
+    async show(req, res) {
+        const id = req.params.id
+        const row = await PessoaRepository.findById(id)
+        res.json(row[0])
+    }
 
     store() {}
 

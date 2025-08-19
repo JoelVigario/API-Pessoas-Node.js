@@ -7,7 +7,10 @@ class PessoaRepository {
         return consulta(sql, '', "Não foi possível localizar!")
     }
 
-    findById() {}
+    findById(id) {
+        const sql = "SELECT * FROM pessoa WHERE id = ?"
+        return consulta(sql, id, "Não foi possível localizar!")
+    }
 
     create() {}
 
