@@ -13,7 +13,11 @@ class PessoaController {
         res.json(row[0])
     }
 
-    store() {}
+    async store(req, res) {
+        const pessoa = req.body
+        const row = await PessoaRepository.create(pessoa)
+        res.json(row)
+    }
 
     update() {}
 

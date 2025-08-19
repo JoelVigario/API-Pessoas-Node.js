@@ -12,7 +12,10 @@ class PessoaRepository {
         return consulta(sql, id, "Não foi possível localizar!")
     }
 
-    create() {}
+    create(pessoa) {
+        const sql = "INSERT INTO pessoa SET ?"
+        return consulta(sql, pessoa, "Não foi possível cadastrar!")
+    }
 
     update() {}
 
