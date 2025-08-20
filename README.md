@@ -15,10 +15,10 @@ Construída com Node.js + Express e conectada a um banco de dados MySQL, oferece
 - Express 🌐
 - MySQL 🗄️
 
-## 📂 Estrutura básica da API
+## 🛣️ Rotas da API
 
-- /pessoas → Retorna todas as pessoas
-- /pessoas/:id → Retorna uma pessoa específica
-. POST /pessoas → Cria um novo registro
-- PUT /pessoas/:id → Atualiza um registro existente
-- DELETE /pessoas/:id → Remove um registro
+- `GET /pessoas` → Retorna todas as pessoas  
+- `GET /pessoas/:id` → Retorna uma pessoa específica  
+- `POST /pessoas` → Cria um novo registro  
+- `PUT /pessoas/:id` → Atualiza um registro existente  
+- `DELETE /pessoas/:id` → Remove um registro 
